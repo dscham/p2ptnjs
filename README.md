@@ -3,7 +3,7 @@ A very simple NodeJS P2P Tracker
 
 # P2P Tracker
 ## Objects
-### Peer(#peer-anchor)
+### Peer (#peer-anchor)
 ```
 {
     id : UUID,
@@ -14,7 +14,7 @@ A very simple NodeJS P2P Tracker
 ```
 Registered `Peer`s will be automatically removed after 24h of `Peer.online=false`; Checked once per hour
 
-### Resource(#resource-anchor)
+### Resource (#resource-anchor)
 ```
 {
     id : UUID,
