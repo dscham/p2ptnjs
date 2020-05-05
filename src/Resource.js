@@ -5,6 +5,8 @@ class Resource {
         this.id = UUID();
         this.topic = payload.topic;
         this.peers = payload.peers ? payload.peers : [];
+
+        this.lastActive = new Date();
     }
 }
 

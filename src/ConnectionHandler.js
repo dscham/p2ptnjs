@@ -7,7 +7,7 @@ const PAYLOAD = 'payload'
 const P2PTNJS = 'P2PTNJS_'
 
 function connectionHandler($, socket) {
-    console.log(`New Connection!`);
+    console.log(`New connection!`);
 
     socket.on('message', (message) => messageHandler(message));
     console.log(`Socket message handler started!`);
@@ -16,7 +16,7 @@ function connectionHandler($, socket) {
     console.log(`Socket error handler started!`);
 
     function messageHandler(content) {
-        console.log('Received a Message: ', content);
+        console.log('Received a message: ', content);
         if (content.startsWith('"{')) {
             const data = JSON.parse(content);
 
@@ -25,7 +25,7 @@ function connectionHandler($, socket) {
                     JSON.stringify(
                         {
                             request: data,
-                            message: `No Command!`,
+                            message: `No command!`,
                             details: `I can't accept messages without a command`
                         }
                     )
@@ -77,7 +77,7 @@ function connectionHandler($, socket) {
                         JSON.stringify(
                             {
                                 request: data,
-                                message: `Unknown Command!`,
+                                message: `Unknown command!`,
                                 details: `I don't know the command '${data[COMMAND]}'. Sorry :(`
                             }
                         )
@@ -89,7 +89,7 @@ function connectionHandler($, socket) {
                 JSON.stringify(
                     {
                         request: content,
-                        message: `Malformed Message!`,
+                        message: `Malformed message!`,
                         details: `I can only handle stringified JSON.`
                     }
                 )
@@ -99,8 +99,7 @@ function connectionHandler($, socket) {
         function generateNeedPayloadMessage(command) {
             return JSON.stringify(
                 {
-                    request: data,
-                    message: `Unknown Command!`,
+                    message: `No payload!`,
                     details: `Command: '${command}' requires a payload.`
                 }
             );

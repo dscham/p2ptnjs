@@ -8,6 +8,7 @@ class Peer {
         this.displayName = payload.displayName ? payload.displayName : '';
 
         this.socket = socket;
+        this.lastSeen = new Date();
     }
 }
 
