@@ -1,0 +1,24 @@
+{
+  "name": "p2ptnjs",
+  "version": "0.1.0",
+  "description": "A very simple NodeJS P2P Tracker",
+  "main": "index.js",
+  "scripts": {
+    "start" : "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dscham/p2ptnjs.git"
+  },
+  "keywords": [
+    "nodejs",
+    "p2p",
+    "tracker"
+  ],
+  "author": "dscham",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dscham/p2ptnjs/issues"
+  },
+  "homepage": "https://github.com/dscham/p2ptnjs#readme"
+}
